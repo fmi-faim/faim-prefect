@@ -9,6 +9,6 @@ Utility functions for workflows.
 ## Installation
 
 ```shell
-pip install git+https://github.com/fmi-faim/flow-utils@v0.1.0
+pip install git+https://github.com/fmi-faim/flow-utils@main
 ```
-This installs tag [v0.1.0](https://github.com/fmi-faim/flow-utils/tree/v0.1.0).
+
