@@ -7,7 +7,7 @@ from prefect import task
 
 
 @task()
-def save_system_information(output_dir: str, logger=logging):
+def save_system_information(output_dir: str, logger=logging.getLogger()):
     """
     Dump system information into system-info.json.
 

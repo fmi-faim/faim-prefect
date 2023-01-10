@@ -3,7 +3,7 @@ import tempfile
 from os.path import exists, join
 from unittest import TestCase
 
-from futils.io import create_output_dir
+from faim_prefect.io import create_output_dir
 
 
 class TestIO(TestCase):
@@ -18,10 +18,10 @@ class TestIO(TestCase):
         user = "user"
         flow_name = "flow_name"
 
-        create_output_dir.run(self.dir, group, user, flow_name)
+        create_output_dir(self.dir, group, user, flow_name)
 
         assert exists(join(self.dir, group, user, flow_name))
 
         # Test that everything works if group and user already exist.
-        create_output_dir.run(self.dir, group, user, "flow_name_2")
+        create_output_dir(self.dir, group, user, "flow_name_2")
         assert exists(join(self.dir, group, user, "flow_name_2"))

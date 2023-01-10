@@ -1,10 +1,7 @@
 import os
 from os.path import join
 
-from prefect import task
 
-
-@task()
 def create_output_dir(root_dir: str, group: str, user: str, flow_name: str):
     """
     Create output directory in `save_data_path` with sub-path

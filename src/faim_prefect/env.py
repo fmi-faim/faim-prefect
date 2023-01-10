@@ -7,7 +7,7 @@ from prefect import task
 
 
 @task()
-def save_conda_env(output_dir: str, logger=logging):
+def save_conda_env(output_dir: str, logger=logging.getLogger()):
     """
     Save conda environment to conda-environment.yaml.
 
