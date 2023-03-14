@@ -19,6 +19,7 @@ class Choices(Block):
         logger = get_run_logger()
         logger.info(group)
     """
+
     choices: List[str]
     docstring: str = 'Select one choice.'
 
