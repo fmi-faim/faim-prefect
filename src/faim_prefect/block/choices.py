@@ -21,10 +21,10 @@ class Choices(Block):
     """
 
     choices: List[str]
-    docstring: str = 'Select one choice.'
+    docstring: str = "Select one choice."
 
     def get(self) -> Enum:
         """Get list of choices."""
-        choices = Enum('Choices', {x: x for x in self.choices})
+        choices = Enum("Choices", {x: x for x in self.choices})
         choices.__doc__ = self.docstring
         return choices
