@@ -19,8 +19,9 @@ class Choices(Block):
         logger = get_run_logger()
         logger.info(group)
     """
+
     choices: List[str]
 
     def get(self) -> Enum:
         """Get list of choices."""
-        return Enum('Choices', {x: x for x in self.choices})
+        return Enum("Choices", {x: x for x in self.choices})
